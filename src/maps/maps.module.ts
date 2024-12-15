@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { PlacesController } from './places/places.controller';
 import { PlacesService } from './places/places.service';
 import { Client as MapsClient } from '@googlemaps/google-maps-services-js';
+import { DirectionsController } from './directions/directions.controller';
+import { DirectionsService } from './directions/directions.service';
 
 /**
  * Configuração do provedor para o MapsClient.
@@ -16,7 +18,7 @@ const mapsProviderConfig = {
 
 @Module({
   imports: [],
-  controllers: [PlacesController],
-  providers: [PlacesService, mapsProviderConfig],
+  controllers: [PlacesController, DirectionsController],
+  providers: [PlacesService, mapsProviderConfig, DirectionsService],
 })
 export class MapsModule {}
