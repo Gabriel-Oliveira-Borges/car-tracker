@@ -1,1 +1,12 @@
-GET http://localhost:3000/places?text=av
+### 
+GET http://localhost:3000/places?text=Rua luverci pereira de souza, 504
+
+###
+GET http://localhost:3000/places?text=Avalon 2
+
+
+###
+@originId=ChIJHcasATbByJQR8qqZuwm5DBA
+@destinationId=ChIJ2SI1G-7GyJQRK11H3ThN3sg
+
+GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
